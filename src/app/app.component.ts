@@ -16,13 +16,20 @@ export class AppComponent {
     new Recipe('Spaghetti', ['noodle', 'sauce'], ['lorem', 'ipsum']),
     new Recipe('Hamburger', ['buns', 'patty'], ['lorem', 'ipsum'])
   ];
-  randomRecipe: Recipe = showRandom(this.recipeList);
+  randomRecipe: Recipe = this.showRandom(this.recipeList);
+  todaysRecipeTitle: Recipe = this.randomRecipe.title;
+  todaysRecipeIngredients: Recipe = this.randomRecipe.ingredients;
+  todaysRecipeDirections: Recipe = this.randomRecipe.directions;
 
-  function showRandom(item) {
+  showRandom(item) {
     const len = item.length;
     let randomIndex = Math.floor(Math.random() * len);
-    return item[randomIndex].title;
-  };
+    return item[randomIndex];
+  }
+   alertMe(randomRecipe) {
+    alert(this.randomRecipe.title);
+  }
+
 
 }
 

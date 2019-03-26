@@ -1,10 +1,13 @@
 <h1>{{title}} {{month}}/{{day}}/{{year}}</h1>
-<h3>Today's recipe is: {{randomRecipe}}</h3>
+<h3>Today's recipe is: {{todaysRecipeTitle}}</h3>
 <div>
   <h2>{{todaysRecipeTitle}}</h2>
+  <h3>{{todaysRecipeIngredients}}</h3>
+  <h3>{{todaysRecipeDirections}}</h3>
 
 </div>
 <h3>Available Recipes</h3>
 <ul>
   <li *ngFor="let recipe of recipeList">{{recipe.title}}<br>{{recipe.ingredients}}<br>{{recipe.directions}}</li>
 </ul>
+<button (click)="alertMe()">Click here</button>
