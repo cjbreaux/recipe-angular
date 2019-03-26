@@ -17,9 +17,9 @@ export class AppComponent {
     new Recipe('Hamburger', ['buns', 'patty'], ['lorem', 'ipsum'])
   ];
   randomRecipe: Recipe = this.showRandom(this.recipeList);
-  todaysRecipeTitle: Recipe = this.randomRecipe.title;
-  todaysRecipeIngredients: Recipe = this.randomRecipe.ingredients;
-  todaysRecipeDirections: Recipe = this.randomRecipe.directions;
+  todaysRecipeTitle: string = this.randomRecipe.title;
+  todaysRecipeIngredients: string[] = this.randomRecipe.ingredients;
+  todaysRecipeDirections: string[] = this.randomRecipe.directions;
 
   showRandom(item) {
     const len = item.length;
