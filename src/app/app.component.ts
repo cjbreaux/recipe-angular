@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Recipe } from './models/recipe.model';
 
 @Component({
   selector: 'app-root',
@@ -33,9 +34,7 @@ export class AppComponent {
 
 }
 
-export class Recipe {
-  constructor(public title: string, public ingredients: string[], public directions: string[]) {}
-}
+
 
 // let app = new AppComponent
 // console.log(app.todaysRecipeTitle)
