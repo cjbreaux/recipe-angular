@@ -8,9 +8,15 @@
 </div>
 
 <h3>Add A New Recipe</h3>
-<h2>Name of the new recipe: {{newRecipe}}</h2>
+<h2>Name of the new recipe: {{newRecipeTitle}}</h2>
 <form>
-  <input [(ngModel)]="newRecipe" type="text" name="recipe">
+  <label for="newRecipeTitle">New Recipe Title</label>
+  <input [(ngModel)]="newRecipeTitle" type="text" name="recipe">
+  <label for="newRecipeIngredients">Ingredients: </label>
+  <input [(ngModel)]="newRecipeIngredients" type="text" name="recipe">
+  <label for="newRecipeDirections">Directions: </label>
+  <input [(ngModel)]="newRecipeDirections" type="text" name="recipe">
+  <button (click)="addRecipe(newRecipeTitle,newRecipeIngredients,newRecipeDirections)">Add Recipe</button>
 </form>
 <h3>Available Recipes</h3>
 <ul>

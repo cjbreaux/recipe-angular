@@ -23,13 +23,14 @@ export class AppComponent {
   todaysRecipeIngredients: string[] = this.randomRecipe.ingredients;
   todaysRecipeDirections: string[] = this.randomRecipe.directions;
 
-  showRandom(item) {
+  showRandom(item: Recipe[]) {
     const len = item.length;
     let randomIndex = Math.floor(Math.random() * len);
     return item[randomIndex];
   }
-   alertMe(randomRecipe) {
-    alert(this.randomRecipe.title);
+
+  addRecipe(title,ingredients,directions) {
+    this.recipeList.push(new Recipe(title,ingredients,directions));
   }
 
 
