@@ -6,6 +6,12 @@
   <h3>{{todaysRecipeDirections}}</h3>
 
 </div>
+
+<h3>Add A New Recipe</h3>
+<h2>Name of the new recipe: {{newRecipe}}</h2>
+<form>
+  <input [(ngModel)]="newRecipe" type="text" name="recipe">
+</form>
 <h3>Available Recipes</h3>
 <ul>
   <li *ngFor="let recipe of recipeList">{{recipe.title}}<br>{{recipe.ingredients}}<br>{{recipe.directions}}</li>
